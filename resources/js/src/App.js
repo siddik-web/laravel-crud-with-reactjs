@@ -1,9 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {
-    Switch,
     Route,
-    Link,
     BrowserRouter,
     Routes
 } from "react-router-dom";
