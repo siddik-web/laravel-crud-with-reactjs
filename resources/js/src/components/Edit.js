@@ -43,12 +43,12 @@ const Edit = () => {
     return (
         <AppContainer title="Edit Post">
             <form>
-                <div className="form-group">
-                    <label htmlFor="title">Ttile</label>
+                <div className="mb-3">
+                    <label htmlFor="title" className="form-label">Ttile</label>
                     <input type="text" className="form-control" id="title"  value={title} onChange={ e => setTitle(e.target.value)}/>
                 </div>
-                <div className="form-group">
-                    <label htmlFor="details">
+                <div className="mb-3">
+                    <label htmlFor="details" className="form-label">
                         Details
                     </label>
                     <textarea

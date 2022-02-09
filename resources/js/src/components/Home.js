@@ -35,9 +35,8 @@ const Home = () => {
             );
         }
 
-        return posts.map((post, index) => (
-            <tr key={index}>
-                <td>{post.id}</td>
+        return posts.map((post) => (
+            <tr key={post.id}>
                 <td>{post.title}</td>
                 <td>{post.details}</td>
                 <td>
@@ -57,13 +56,12 @@ const Home = () => {
     return (
         <AppContainer title="Learn ReactJS With Laravel">
             <div>
-                <Link className="nav-link" to="/add" className="btn btn-primary">Add</Link>
+                <Link className="nav-link" to="/add" className="btn btn-primary">Add New</Link>
             </div>
             <div className="table-responsive">
                 <table className="table">
                     <thead>
                         <tr>
-                            <th scope="col">#</th>
                             <th scope="col">Title</th>
                             <th scope="col">Details</th>
                             <th scope="col">Actions</th>
