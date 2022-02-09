@@ -1,11 +1,11 @@
 import React ,{ useState, useEffect } from "react";
-import { useHistory, useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import api from "../api";
 import AppContainer from "./AppContainer";
 
 const Edit = () => {
     const { id } = useParams();
-    const history = useHistory();
+    let navigate = useNavigate();
     const [loading, setLoading] = useState(false);
     const [title, setTitle] = useState('');
     const [details, setDetails] = useState('');
@@ -16,7 +16,7 @@ const Edit = () => {
                 title,details
             }, id)
 
-            history.push('/');
+            navigate('/');
         }
         catch
         {

@@ -1,10 +1,10 @@
 import React ,{ useState } from "react";
-import { useHistory } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import api from "../api";
 import AppContainer from "./AppContainer";
 
 const Add = () => {
-    let history = useHistory();
+    let navigate = useNavigate();
     const [loading, setLoading] = useState(false);
     const [title, setTitle] = useState('');
     const [details, setDetails] = useState('');
@@ -15,7 +15,7 @@ const Add = () => {
                 title,details
             })
 
-            history.push('/');
+            navigate('/');
         }
         catch
         {
